@@ -1,0 +1,54 @@
+{
+  "name": "qcui-vue",
+  "version": "0.0.17",
+  "description": "Qucik & Compat UI library for Vue3.",
+  "main": "./dist/qcui-vue.umd.js",
+  "module": "./dist/qcui-vue.es.js",
+  "types": "./dist/main.d.ts",
+  "files": [
+    "dist/*"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/qcui-vue.es.js",
+      "require": "./dist/qcui-vue.umd.js"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:lib": "vite build && vue-tsc --allowJs --emitDeclarationOnly --declaration --outDir ./dist/ ./src/main.ts",
+    "dev": "vite --host",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "CopperLib",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.18.4",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vue/tsconfig": "^0.1.3",
+    "autoprefixer": "^10.4.7",
+    "pinia": "^2.0.14",
+    "postcss": "^8.4.14",
+    "rollup": "^2.75.6",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-vue": "^6.0.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "vite-plugin-dts": "^1.2.0",
+    "vite-plugin-windicss": "^1.8.4",
+    "vue-router": "^4.0.15",
+    "vue-tsc": "^0.37.3",
+    "vuepress": "^2.0.0-beta.46",
+    "windicss": "^3.5.4"
+  }
+}
