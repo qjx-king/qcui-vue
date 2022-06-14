@@ -25,4 +25,3 @@ dist-ssr
 .cache
 .temp
 
-src/components/input/InputMtext.vue
