@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     QCComponent
-    <div class="main__item" >
+    <div class="main__item">
       <QCButton class="main__item--style">我的第一个按钮</QCButton>
       <QCButton class="main__item--style">水波纹按钮</QCButton>
     </div>
@@ -11,16 +11,19 @@
     <div class="main__item">
       <QCTextarea></QCTextarea>
     </div>
+    <br />
+    <br />
     <div class="main__item">
-      <QCInptutTitle 
-                  name="title"
-                  placeholder="输入标题" type="url"></QCInptutTitle>
+      <QCInputTitle class="main__item--fix"  name="title" placeholder="输入标题" >
+        标题
+      </QCInputTitle>
     </div>
   </div>
 </template>
-<script setup lang="ts">
-</script>
+<script lang="ts">
 
+</script>
+  
 <style>
 .main {
   margin-top: 10px;
@@ -28,10 +31,12 @@
   margin-right: 10px;
   margin-left: 10px;
 }
-.main__item{
+.main__item {
   margin-top: 10px;
 }
-.main__item--style{
-
+.main__item--style {
+}
+.main__item--fix{
+   width: 250px
 }
 </style>
