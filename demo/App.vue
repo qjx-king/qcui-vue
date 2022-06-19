@@ -18,6 +18,18 @@
         标题
       </QCInputTitle>
     </div>
+    
+     <br />
+    <br />
+    <br />
+    <div>
+      <span>栅格</span>
+      <QCRow class="main__row" gutter="20">
+        <QCCol span="8" class="main__row--col">span: 8</QCCol>
+        <QCCol span="8" class="main__row--col">span: 8</QCCol>
+        <QCCol span="8" class="main__row--col">span: 8</QCCol>
+      </QCRow>
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -38,5 +50,8 @@
 }
 .main__item--fix{
    width: 250px
+}
+.main__row--col {
+  border: 1px solid red;
 }
 </style>
