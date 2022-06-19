@@ -18,5 +18,12 @@ export default defineConfig({
       },
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "src/style/gobal.scss";`
+      }
+    }
+  },
   plugins: [vue()]
 })

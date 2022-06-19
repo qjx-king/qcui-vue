@@ -30,6 +30,74 @@
         <QCCol span="8" class="main__row--col">span: 8</QCCol>
       </QCRow>
     </div>
+    <br />
+    <br />
+    <br />
+    <div>
+      <span>type属性控掉box的上下边框显示</span>
+      <QCBoxSkin type="top"></QCBoxSkin>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div>
+      <span>图片背景box</span>
+      <QCBImgeBox
+        type="top"
+        class="main__image"
+        image="https://img2.woyaogexing.com/2022/06/11/3301c60daddc7b6d!400x400.jpg"
+      ></QCBImgeBox>
+    </div>
+     <br />
+    <br />
+    <br />
+    <div>
+      <span>左右布局</span>
+      <QCLayout class="main__layout" style="height: 270px; width: 370px" horizontal>
+        <QCAside style="background: red;  width: 70px">我是左侧</QCAside>
+        <QCContent
+          style="background: green; overflow-y: scroll; height: 270px"
+          class="main__layout"
+        >
+          <div style="height: 470px">
+            <div>我是内容</div>
+            <div>我是内容</div>
+            <div>我是内容</div>
+            <div>我是内容</div>
+            <div>我是内容</div>
+          </div>
+        </QCContent>
+      </QCLayout>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div>
+      <span>上下布局</span>
+      <QCLayout class="main__layout" style="height: 270px; width: 370px">
+        <QCHeader style="background: pink" class="main__layout"
+          >我是头部</QCHeader
+        >
+        <QCContent
+          style="background: green; overflow-y: scroll; height: 270px"
+          class="main__layout"
+        >
+          <div style="height: 470px">
+            <div>我是内容</div>
+            <div>我是内容</div>
+            <div>我是内容</div>
+            <div>我是内容</div>
+            <div>我是内容</div>
+          </div>
+        </QCContent>
+        <QCFooter style="background: yellow" class="main__layout"
+          >我是底部</QCFooter
+        >
+      </QCLayout>
+    </div>
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 <script lang="ts">
@@ -53,5 +121,9 @@
 }
 .main__row--col {
   border: 1px solid red;
+}
+.main__image {
+  height: 200px;
+  width: 300px;
 }
 </style>
