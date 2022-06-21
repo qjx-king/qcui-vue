@@ -15,6 +15,11 @@ import QCContent from "./layout/Content.vue";
 import QCFooter from "./layout/Footer.vue";
 import QCHeader from "./layout/Header.vue";
 import QCAside from "./layout/Aside.vue";
+
+import QCTab from "./tabs/Tab.vue";
+import QCTabs from "./tabs/Tabs.vue";
+import QCCard from "./box/BoxCard.vue";
+import QCCardF from "./box/BoxCardF.vue";
 export default {
   QCButton,
   QCInput,
@@ -29,4 +34,8 @@ export default {
   QCFooter,
   QCHeader,
   QCAside,
+  QCTab,
+  QCTabs,
+  QCCard,
+  QCCardF
 };
