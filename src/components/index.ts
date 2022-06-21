@@ -18,6 +18,10 @@ import QCAside from "./layout/Aside.vue";
 
 import QCTab from "./tabs/Tab.vue";
 import QCTabs from "./tabs/Tabs.vue";
+//由于嵌套使用
+import QcTab from "./tabs/Tab.vue";
+import QcTabs from "./tabs/Tabs.vue";
+
 import QCCard from "./box/BoxCard.vue";
 import QCCardF from "./box/BoxCardF.vue";
 export default {
@@ -37,5 +41,7 @@ export default {
   QCTab,
   QCTabs,
   QCCard,
-  QCCardF
+  QCCardF,
+  QcTab,
+  QcTabs
 };

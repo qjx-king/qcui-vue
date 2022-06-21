@@ -218,7 +218,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 :root {
   --primary-color: #4313aa;
   --border-color: #e2e2e2;

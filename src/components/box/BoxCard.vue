@@ -11,7 +11,7 @@
 <style lang='scss' scoped>
 .box-card{
     //height: 100%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 0 5px gray;
     border-radius: 5px;
     padding: 10px;
