@@ -295,9 +295,9 @@
         </QCLayout>
       </QCTab>
     </QCTabs>
-    <QCFooter style="border: 1px; background: rgb(12, 170, 46); height: 130px"
+    <!-- <QCFooter style="border: 1px; background: rgb(12, 170, 46); height: 130px"
       >我是底部</QCFooter
-    >
+    > -->
   </div>
 </template>
 
