@@ -1,7 +1,12 @@
 <template>
   <div class="app">
-    <QCHeader style="border: 1px; background: rgb(235, 88, 112); height: 130px">
-      我是头部
+    <QCHeader class="app__header">
+      <a href="https://cn.vuejs.org"  target="_blank">
+        <QCBImgeBox class="app__header--leftlogo" image="../public/vue.jpeg" />
+      </a>
+      <a href="https://github.com/copperlib/qcui-vue"  target="_blank">
+        <QCBImgeBox class="app__header--rightlogo" image="../public/github.png" />
+      </a>
     </QCHeader>
     <QCTabs>
       <template name="tab1">
@@ -236,7 +241,7 @@
                 <QCBoxSkin type="bottom" class="card-main__title">
                   <h4>选项卡示例3</h4>
                   <div class="card-main__title--fix">
-                    底部显示选项卡列表项 reverse Tabs 组件上 
+                    底部显示选项卡列表项 reverse Tabs 组件上
                   </div>
                 </QCBoxSkin>
                 <QCTabs reverse>
@@ -261,53 +266,53 @@
                 </QCTabs>
               </div>
             </QCCardF>
-            <QCCardF :scourcecode="sctabs1" class="card-main" >
+            <QCCardF :scourcecode="sctabs1" class="card-main">
               <QCBoxSkin type="bottom" class="card-main__title">
                 <h4>动态生成选项卡</h4>
                 <div class="card-main__title--fix">
-                    此示例显示了从数组生成的选项卡列表。 这可用于动态生成选项卡 
+                  此示例显示了从数组生成的选项卡列表。 这可用于动态生成选项卡
                 </div>
               </QCBoxSkin>
-              <div class="card-main__item" >
-              <QCTabs>
-                <template v-for="(i, index) in dynamicTabs" :key="index">
-                  <div class="tab-title" :name="`tab-exp7-${i}`">
-                    <i class="ri-settings-3-fill" aria-hidden="true"></i>
-                    Tab {{ i }}
-                  </div>
-                </template>
-                <QCTab
-                  v-for="(i, idx) in dynamicTabs"
-                  :key="idx"
-                  :title-slot="`tab-exp7-${i}`">
-                  <h3>This is Tab {{ i }}</h3>
-                </QCTab>
-              </QCTabs>  
-              
+              <div class="card-main__item">
+                <QCTabs>
+                  <template v-for="(i, index) in dynamicTabs" :key="index">
+                    <div class="tab-title" :name="`tab-exp7-${i}`">
+                      <i class="ri-settings-3-fill" aria-hidden="true"></i>
+                      Tab {{ i }}
+                    </div>
+                  </template>
+                  <QCTab
+                    v-for="(i, idx) in dynamicTabs"
+                    :key="idx"
+                    :title-slot="`tab-exp7-${i}`"
+                  >
+                    <h3>This is Tab {{ i }}</h3>
+                  </QCTab>
+                </QCTabs>
               </div>
-            </QCCardF> 
+            </QCCardF>
           </QCContent>
         </QCLayout>
       </QCTab>
     </QCTabs>
-    <QCFooter style="border: 1px; background: rgb(12, 170, 46); height: 130px">我是底部</QCFooter>
+    <QCFooter style="border: 1px; background: rgb(12, 170, 46); height: 130px"
+      >我是底部</QCFooter
+    >
   </div>
 </template>
 
 
 <script lang="ts">
-import { ref,reactive } from "vue";
+import { ref, reactive } from "vue";
 import { sourcecode } from "./sourcecode.js";
 export default {
   name: "App",
-
   setup() {
     const visibility = ref(false);
     const sourceData = reactive(sourcecode);
     const toggle = () => {
       visibility.value = !visibility.value;
     };
-
     return {
       dynamicTabs: [1, 2, 3],
       visibility,
@@ -319,8 +324,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 $max-width: 1200px;
-.tab-title {
-}
+
 @include b(app) {
   max-width: $max-width;
   margin-left: calc(50vw - 600px);
@@ -337,6 +341,27 @@ $max-width: 1200px;
       //margin-top: 10px;
       //margin-bottom: 10px;
     }
+  }
+  @include e(header) {
+    width: 100%;
+    height: 120px;
+    // background: rgb(235, 88, 112);
+    @include m(leftlogo) {
+      display: inline-block;
+      float: left;
+      height: 80px;
+      width: 80px;
+      margin-top: 20px;
+      margin-left: 45px;
+    } 
+     @include m(rightlogo) {
+       display: inline-block;
+       float: right;
+       height: 98px;
+       width: 98px;
+      margin-top: 20px;
+       margin-right: 45px;
+     } 
   }
 }
 
